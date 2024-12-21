@@ -1,0 +1,49 @@
+[:svg {:viewBox "0 0 500 150" :xmlns "http://www.w3.org/2000/svg"}
+ ;; Definitions for arrow marker
+ [:defs
+  [:marker {:id "arrowhead"
+            :markerWidth 7
+            :markerHeight 5
+            :refX 6
+            :refY 2.5
+            :orient "auto"}
+   [:polygon {:points "0 0, 7 2.5, 0 5"
+              :fill "#4a90e2"}]]]
+
+ ;; States (circles)
+ [:circle {:cx 80 :cy 75 :r 30
+           :stroke "black" :fill "white" :stroke-width 2}]
+ [:circle {:cx 200 :cy 75 :r 30
+           :stroke "black" :fill "white" :stroke-width 2}]
+ [:circle {:cx 320 :cy 75 :r 30
+           :stroke "black" :fill "white" :stroke-width 2}]
+ [:circle {:cx 440 :cy 75 :r 30
+           :stroke "black" :fill "white" :stroke-width 2}]
+
+ ;; State Labels
+ [:text {:x 70 :y 80 :font-family "Arial" :font-size 16} "S1"]
+ [:text {:x 190 :y 80 :font-family "Arial" :font-size 16} "S2"]
+ [:text {:x 310 :y 80 :font-family "Arial" :font-size 16} "S3"]
+ [:text {:x 430 :y 80 :font-family "Arial" :font-size 16} "S4"]
+
+ ;; Curved Transition Arrows
+ [:path {:d "M105 55 Q140 25 175 55"
+         :stroke "#4a90e2"
+         :stroke-width 2
+         :marker-end "url(#arrowhead)"
+         :fill "none"}]
+ [:path {:d "M225 55 Q260 25 295 55"
+         :stroke "#4a90e2"
+         :stroke-width 2
+         :marker-end "url(#arrowhead)"
+         :fill "none"}]
+ [:path {:d "M345 55 Q380 25 415 55"
+         :stroke "#4a90e2"
+         :stroke-width 2
+         :marker-end "url(#arrowhead)"
+         :fill "none"}]
+
+ ;; Transition Labels
+ [:text {:x 130 :y 30 :fill "#4a90e2" :font-family "Arial" :font-size 16} "f"]
+ [:text {:x 250 :y 30 :fill "#4a90e2" :font-family "Arial" :font-size 16} "g"]
+ [:text {:x 370 :y 30 :fill "#4a90e2" :font-family "Arial" :font-size 16} "h"]]

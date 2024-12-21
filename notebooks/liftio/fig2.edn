@@ -1,0 +1,28 @@
+;; Version with highlighted arrow
+[:svg {:viewBox "0 0 500 150" :xmlns "http://www.w3.org/2000/svg"}
+ [:defs
+  [:marker {:id "arrowhead3"
+            :markerWidth 7
+            :markerHeight 5
+            :refX 6
+            :refY 2.5
+            :orient "auto"}
+   [:polygon {:points "0 0, 7 2.5, 0 5"
+              :fill "#4a90e2"}]]]  ;; Blue arrowhead to match path
+
+ [:circle {:cx 80 :cy 75 :r 30
+           :stroke "black" :fill "white" :stroke-width 2}]
+ [:circle {:cx 220 :cy 75 :r 30
+           :stroke "black" :fill "white" :stroke-width 2}]
+
+ [:text {:x 70 :y 80 :font-family "Arial" :font-size 16} "S1"]
+ [:text {:x 210 :y 80 :font-family "Arial" :font-size 16} "S2"]
+
+ ;; Arrow with soft blue highlight
+ [:path {:d "M105 55 Q150 25 195 55"
+         :stroke "#4a90e2"
+         :stroke-width 2.5
+         :marker-end "url(#arrowhead3)"
+         :fill "none"}]
+
+ [:text {:x 130 :y 30 :fill "#4a90e2" :font-family "Arial" :font-size 16} "h·g·f"]]

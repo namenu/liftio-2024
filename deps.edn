@@ -1,0 +1,15 @@
+{:paths   ["src" "resources"]
+ :deps    {org.clojure/clojure                   {:mvn/version "1.12.0"}
+
+           io.github.nextjournal/clerk           {:mvn/version "0.17.1102"}
+           io.github.nextjournal/clerk-slideshow {:git/sha "11a83fea564da04b9d17734f2031a4921d917893"}
+
+           meander/epsilon                       {:mvn/version "0.0.650"}}
+ :aliases {:nextjournal/clerk
+           {:exec-fn                   nextjournal.clerk/build!
+            :exec-args                 {:paths ["notebooks/liftio.clj"]}
+            ;; TODO: add all notebooks you want to have built ☝️
+            ;; if you just want to build one notebook, set `:index`
+
+            ;; optional list of aliases to include in the build
+            :nextjournal.clerk/aliases [:dev]}}}
